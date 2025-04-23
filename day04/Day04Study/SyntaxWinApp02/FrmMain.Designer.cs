@@ -35,7 +35,9 @@
             label1 = new Label();
             CboArray = new ComboBox();
             label2 = new Label();
-            CboBox1 = new ComboBox();
+            CboList = new ComboBox();
+            label3 = new Label();
+            CboDictionary = new ComboBox();
             SuspendLayout();
             // 
             // BtnCheck
@@ -49,8 +51,9 @@
             BtnCheck.Padding = new Padding(12, 0, 0, 0);
             BtnCheck.Size = new Size(100, 40);
             BtnCheck.TabIndex = 0;
-            BtnCheck.Text = "체크";
+            BtnCheck.Text = "데이터";
             BtnCheck.UseVisualStyleBackColor = true;
+            BtnCheck.Click += BtnCheck_Click;
             // 
             // imageList1
             // 
@@ -62,7 +65,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(29, 31);
+            label1.Location = new Point(41, 31);
             label1.Name = "label1";
             label1.Size = new Size(78, 15);
             label1.TabIndex = 1;
@@ -71,7 +74,7 @@
             // CboArray
             // 
             CboArray.FormattingEnabled = true;
-            CboArray.Location = new Point(114, 28);
+            CboArray.Location = new Point(123, 28);
             CboArray.Name = "CboArray";
             CboArray.Size = new Size(121, 23);
             CboArray.TabIndex = 2;
@@ -80,20 +83,39 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(17, 62);
+            label2.Location = new Point(29, 62);
             label2.Name = "label2";
             label2.Size = new Size(90, 15);
             label2.TabIndex = 1;
             label2.Text = "리스트로 할당 :";
             // 
-            // CboBox1
+            // CboList
             // 
-            CboBox1.FormattingEnabled = true;
-            CboBox1.Location = new Point(114, 59);
-            CboBox1.Name = "CboBox1";
-            CboBox1.Size = new Size(121, 23);
-            CboBox1.TabIndex = 2;
-            CboBox1.SelectedIndexChanged += CboArray_SelectedIndexChanged;
+            CboList.FormattingEnabled = true;
+            CboList.Location = new Point(123, 59);
+            CboList.Name = "CboList";
+            CboList.Size = new Size(121, 23);
+            CboList.TabIndex = 2;
+            CboList.SelectedIndexChanged += CboList_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("나눔고딕", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label3.Location = new Point(17, 96);
+            label3.Name = "label3";
+            label3.Size = new Size(104, 14);
+            label3.TabIndex = 1;
+            label3.Text = "딕셔너리로 할당 :";
+            // 
+            // CboDictionary
+            // 
+            CboDictionary.FormattingEnabled = true;
+            CboDictionary.Location = new Point(123, 93);
+            CboDictionary.Name = "CboDictionary";
+            CboDictionary.Size = new Size(121, 23);
+            CboDictionary.TabIndex = 2;
+            CboDictionary.SelectedIndexChanged += CboDictionary_SelectedIndexChanged;
             // 
             // FrmMain
             // 
@@ -101,8 +123,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(584, 311);
-            Controls.Add(CboBox1);
+            Controls.Add(CboDictionary);
+            Controls.Add(CboList);
             Controls.Add(CboArray);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(BtnCheck);
@@ -122,6 +146,8 @@
         private ComboBox CboArray;
         private ImageList imageList1;
         private Label label2;
-        private ComboBox CboBox1;
+        private ComboBox CboList;
+        private Label label3;
+        private ComboBox CboDictionary;
     }
 }

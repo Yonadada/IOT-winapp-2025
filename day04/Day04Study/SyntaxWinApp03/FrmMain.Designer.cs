@@ -1,0 +1,133 @@
+﻿namespace SyntaxWinApp03
+{
+    partial class FrmMain
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            BtnSave = new Button();
+            BtnLoad = new Button();
+            RtbNote = new RichTextBox();
+            BtnRed = new Button();
+            BtnBold = new Button();
+            DlgOpen = new OpenFileDialog();
+            DlgSave = new SaveFileDialog();
+            DlgColor = new ColorDialog();
+            SuspendLayout();
+            // 
+            // BtnSave
+            // 
+            BtnSave.Location = new Point(366, 253);
+            BtnSave.Name = "BtnSave";
+            BtnSave.Size = new Size(100, 28);
+            BtnSave.TabIndex = 0;
+            BtnSave.Text = "저장";
+            BtnSave.UseVisualStyleBackColor = true;
+            BtnSave.Click += BtnSave_Click;
+            // 
+            // BtnLoad
+            // 
+            BtnLoad.Location = new Point(472, 253);
+            BtnLoad.Name = "BtnLoad";
+            BtnLoad.Size = new Size(100, 28);
+            BtnLoad.TabIndex = 1;
+            BtnLoad.Text = "읽기";
+            BtnLoad.UseVisualStyleBackColor = true;
+            BtnLoad.Click += BtnLoad_Click;
+            // 
+            // RtbNote
+            // 
+            RtbNote.Font = new Font("나눔고딕", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            RtbNote.Location = new Point(12, 11);
+            RtbNote.Name = "RtbNote";
+            RtbNote.ScrollBars = RichTextBoxScrollBars.ForcedBoth;
+            RtbNote.Size = new Size(560, 235);
+            RtbNote.TabIndex = 1;
+            RtbNote.Text = "";
+            RtbNote.WordWrap = false;
+            // 
+            // BtnRed
+            // 
+            BtnRed.BackColor = SystemColors.GradientInactiveCaption;
+            BtnRed.Font = new Font("나눔고딕", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            BtnRed.ForeColor = Color.FromArgb(255, 128, 128);
+            BtnRed.Location = new Point(294, 253);
+            BtnRed.Name = "BtnRed";
+            BtnRed.Size = new Size(30, 30);
+            BtnRed.TabIndex = 2;
+            BtnRed.Text = "R";
+            BtnRed.UseVisualStyleBackColor = false;
+            BtnRed.Click += BtnRed_Click;
+            // 
+            // BtnBold
+            // 
+            BtnBold.BackColor = SystemColors.ScrollBar;
+            BtnBold.Font = new Font("나눔고딕", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            BtnBold.ForeColor = Color.FromArgb(128, 128, 255);
+            BtnBold.Location = new Point(330, 253);
+            BtnBold.Name = "BtnBold";
+            BtnBold.Size = new Size(30, 30);
+            BtnBold.TabIndex = 2;
+            BtnBold.Text = "B";
+            BtnBold.UseVisualStyleBackColor = false;
+            BtnBold.Click += BtnBold_Click;
+            // 
+            // DlgOpen
+            // 
+            DlgOpen.FileName = "openFileDialog1";
+            // 
+            // FrmMain
+            // 
+            AutoScaleDimensions = new SizeF(7F, 14F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientInactiveCaption;
+            ClientSize = new Size(584, 290);
+            Controls.Add(BtnBold);
+            Controls.Add(BtnRed);
+            Controls.Add(RtbNote);
+            Controls.Add(BtnLoad);
+            Controls.Add(BtnSave);
+            Font = new Font("나눔고딕", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "FrmMain";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "파일IO 윈앱";
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private Button BtnSave;
+        private Button BtnLoad;
+        private RichTextBox RtbNote;
+        private Button BtnRed;
+        private Button BtnBold;
+        private OpenFileDialog DlgOpen;
+        private SaveFileDialog DlgSave;
+        private ColorDialog DlgColor;
+    }
+}
