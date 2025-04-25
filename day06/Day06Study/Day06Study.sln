@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntaxWinApp01", "SyntaxWin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinControlsApp", "WinControlsApp\WinControlsApp.csproj", "{8ADA2EAA-884C-4842-A51B-D76759AA3409}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinformStudy_01", "WinformStudy_01\WinformStudy_01.csproj", "{A07F4B8D-28A7-4313-86BB-8A107BC6BD41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8ADA2EAA-884C-4842-A51B-D76759AA3409}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ADA2EAA-884C-4842-A51B-D76759AA3409}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ADA2EAA-884C-4842-A51B-D76759AA3409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07F4B8D-28A7-4313-86BB-8A107BC6BD41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07F4B8D-28A7-4313-86BB-8A107BC6BD41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07F4B8D-28A7-4313-86BB-8A107BC6BD41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07F4B8D-28A7-4313-86BB-8A107BC6BD41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
