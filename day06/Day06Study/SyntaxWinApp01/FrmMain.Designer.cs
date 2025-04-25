@@ -1,4 +1,4 @@
-﻿namespace SyntaxWinApp03
+﻿namespace SyntaxWinApp01
 {
     partial class FrmMain
     {
@@ -28,85 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            BtnStart = new Button();
             label1 = new Label();
             TxtLog = new TextBox();
             statusStrip1 = new StatusStrip();
-            LblCurrState = new ToolStripStatusLabel();
+            LblState = new ToolStripStatusLabel();
             PrgProcess = new ProgressBar();
+            BtnStart = new Button();
+            BgwProcess = new System.ComponentModel.BackgroundWorker();
             statusStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // BtnStart
-            // 
-            BtnStart.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            BtnStart.Image = Properties.Resources.plus1;
-            BtnStart.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnStart.Location = new Point(473, 251);
-            BtnStart.Name = "BtnStart";
-            BtnStart.Padding = new Padding(10, 0, 0, 0);
-            BtnStart.Size = new Size(100, 30);
-            BtnStart.TabIndex = 0;
-            BtnStart.Text = "시작";
-            BtnStart.UseVisualStyleBackColor = true;
-            BtnStart.Click += BtnStart_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(10, 13);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
             label1.Size = new Size(31, 15);
-            label1.TabIndex = 1;
+            label1.TabIndex = 0;
             label1.Text = "로그";
             // 
             // TxtLog
             // 
-            TxtLog.Location = new Point(12, 37);
+            TxtLog.Location = new Point(12, 27);
             TxtLog.Multiline = true;
             TxtLog.Name = "TxtLog";
             TxtLog.ScrollBars = ScrollBars.Vertical;
-            TxtLog.Size = new Size(560, 208);
-            TxtLog.TabIndex = 2;
+            TxtLog.Size = new Size(560, 221);
+            TxtLog.TabIndex = 1;
             // 
             // statusStrip1
             // 
-            statusStrip1.Items.AddRange(new ToolStripItem[] { LblCurrState });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { LblState });
             statusStrip1.Location = new Point(0, 289);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(584, 22);
             statusStrip1.SizingGrip = false;
-            statusStrip1.TabIndex = 3;
+            statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
             // 
-            // LblCurrState
+            // LblState
             // 
-            LblCurrState.Name = "LblCurrState";
-            LblCurrState.Size = new Size(90, 17);
-            LblCurrState.Text = "현재상태 : 중지";
+            LblState.Name = "LblState";
+            LblState.Size = new Size(94, 17);
+            LblState.Text = "현재 상태 : 중지";
             // 
             // PrgProcess
             // 
-            PrgProcess.Location = new Point(10, 254);
+            PrgProcess.Location = new Point(12, 254);
             PrgProcess.Name = "PrgProcess";
-            PrgProcess.Size = new Size(457, 23);
-            PrgProcess.TabIndex = 4;
+            PrgProcess.Size = new Size(452, 30);
+            PrgProcess.TabIndex = 3;
+            // 
+            // BtnStart
+            // 
+            BtnStart.Location = new Point(472, 254);
+            BtnStart.Name = "BtnStart";
+            BtnStart.Size = new Size(100, 30);
+            BtnStart.TabIndex = 4;
+            BtnStart.Text = "시작";
+            BtnStart.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkKhaki;
             ClientSize = new Size(584, 311);
+            Controls.Add(BtnStart);
             Controls.Add(PrgProcess);
             Controls.Add(statusStrip1);
             Controls.Add(TxtLog);
             Controls.Add(label1);
-            Controls.Add(BtnStart);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
             Name = "FrmMain";
-            Text = "스레드 연습 앱";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "백그라운드워커 윈앱";
+            Load += FrmMain_Load;
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             ResumeLayout(false);
@@ -115,11 +111,12 @@
 
         #endregion
 
-        private Button BtnStart;
         private Label label1;
         private TextBox TxtLog;
         private StatusStrip statusStrip1;
-        private ToolStripStatusLabel LblCurrState;
         private ProgressBar PrgProcess;
+        private Button BtnStart;
+        private ToolStripStatusLabel LblState;
+        private System.ComponentModel.BackgroundWorker BgwProcess;
     }
 }
